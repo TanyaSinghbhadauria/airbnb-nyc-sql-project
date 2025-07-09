@@ -23,6 +23,8 @@ Analyze Airbnb listings in New York City using SQL to uncover pricing patterns, 
 5. Which neighborhoods have the highest average prices (with reliable sample size)?
 
 ---
+## Dashboard Link
+https://public.tableau.com/views/NYCAirbnbListings_17520026484210/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link
 
 ## 🧠 SQL Analysis
 
@@ -32,7 +34,7 @@ SELECT
   neighbourhood_group AS borough,
   room_type,
   ROUND(AVG(price), 2) AS avg_price
-FROM NYC_AIRBNB
+FROM NYCAIRBNB
 GROUP BY borough, room_type
 ORDER BY avg_price DESC;
 
@@ -44,7 +46,7 @@ SELECT
   neighbourhood_group AS borough,
   room_type,
   COUNT(*) AS total_listings
-FROM NYC_AIRBNB
+FROM NYCAIRBNB
 GROUP BY borough, room_type
 ORDER BY total_listings DESC;
 
@@ -59,7 +61,7 @@ SELECT
   neighbourhood,
   room_type,
   price
-FROM NYC_AIRBNB
+FROM NYCAIRBNB
 ORDER BY price DESC
 LIMIT 10;
 
@@ -71,7 +73,7 @@ SELECT
   host_id,
   host_name,
   COUNT(*) AS listing_count
-FROM NYC_AIRBNB
+FROM NYCAIRBNB
 GROUP BY host_id, host_name
 ORDER BY listing_count DESC
 LIMIT 10;
@@ -85,7 +87,7 @@ SELECT
   neighbourhood,
   ROUND(AVG(price), 2) AS avg_price,
   COUNT(*) AS listing_count
-FROM NYC_AIRBNB
+FROM NYCAIRBNB
 GROUP BY neighbourhood
 HAVING COUNT(*) > 10
 ORDER BY avg_price DESC
@@ -93,8 +95,7 @@ LIMIT 10;
 
 Insight: Neighborhoods like Little Italy, Flatiron District & Tribeca top the average price chart suggesting concentrated demand for premium stays.
 
-## Dashboard Link
-https://public.tableau.com/views/NYCAirbnbListings_17520026484210/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link
+
 
 Author
 
