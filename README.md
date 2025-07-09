@@ -93,6 +93,9 @@ LIMIT 10;
 
 Insight: Neighborhoods like Little Italy, Flatiron District & Tribeca top the average price chart suggesting concentrated demand for premium stays.
 
+## Dashboard Link
+https://public.tableau.com/app/profile/tanya.singh5697/viz/NYCAirbnbListings_17520026484210/Dashboard1#2
+
 Author
 
 Tanya Singh
